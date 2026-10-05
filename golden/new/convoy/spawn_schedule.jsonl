@@ -1,0 +1,3 @@
+{"v": 1, "kind": "init", "module": "convoy", "seed": 1337, "tunables": {}, "state": {}}
+{"v": 1, "kind": "step", "frame": 0, "frames": 5000}
+{"v": 1, "kind": "expect", "frame": 5000, "state": {}, "events": [], "note": "Placeholder for exact spawn schedule dependent on Mulberry32."}

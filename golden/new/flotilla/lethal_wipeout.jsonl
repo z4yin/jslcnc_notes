@@ -1,0 +1,7 @@
+{"v": 1, "kind": "init", "module": "flotilla", "seed": 1337, "tunables": {}, "state": {"jslcLegitimacy": 80, "aoiPopularSupport": 20, "flotillas": {"f1": {"vessels": ["v1", "v2"]}}}}
+{"v": 1, "kind": "input", "frame": 10, "op": "damage", "args": {"targetId": "v1", "weaponLethality": "LETHAL", "amount": 10}}
+{"v": 1, "kind": "step", "frame": 10, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 11, "state": {"jslcLegitimacy": 0, "aoiPopularSupport": 45}, "events": [{"type": "PR_DELTA", "who": "JSLC", "delta": -80, "reason": "FLOTILLA_LETHAL_WIPEOUT"}, {"type": "FLOTILLA_LETHAL_INCIDENT", "vesselId": "v1"}], "note": "First lethal hit wipes out PR."}
+{"v": 1, "kind": "input", "frame": 20, "op": "damage", "args": {"targetId": "v2", "weaponLethality": "LETHAL", "amount": 10}}
+{"v": 1, "kind": "step", "frame": 20, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 21, "state": {"jslcLegitimacy": 0, "aoiPopularSupport": 45}, "events": [], "note": "Second hit does not trigger wipeout."}

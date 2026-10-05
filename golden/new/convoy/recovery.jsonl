@@ -1,0 +1,4 @@
+{"v": 1, "kind": "init", "module": "convoy", "seed": 1337, "tunables": {}, "state": {"jslcLegitimacy": 50, "trucks": {"t1": {"team": "AoI", "immobilized": true}}}}
+{"v": 1, "kind": "input", "frame": 0, "op": "startRecovery", "args": {"truckId": "t1", "boarderId": "b1"}}
+{"v": 1, "kind": "step", "frame": 0, "frames": 90}
+{"v": 1, "kind": "expect", "frame": 90, "state": {"jslcLegitimacy": 58, "trucks": {"t1": {"team": "Neutral_UN"}}}, "events": [{"type": "PR_DELTA", "who": "JSLC", "delta": 8, "reason": "UN_CONVOY_RECOVERED"}], "note": "3s recovery channel restores team to Neutral_UN and grants +8 PR."}

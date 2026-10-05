@@ -1,0 +1,7 @@
+{"v": 1, "kind": "init", "module": "orbital", "seed": 1337, "tunables": {}, "state": {"freezeActive": true, "powers": {"p_terr": {"jurisdiction": "TERRESTRIAL"}, "p_orb": {"jurisdiction": "ORBITAL"}}}}
+{"v": 1, "kind": "input", "frame": 10, "op": "activatePower", "args": {"powerId": "p_terr"}}
+{"v": 1, "kind": "step", "frame": 10, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 11, "state": {}, "events": [{"type": "STRATEGIC_POWER_BLOCKED", "powerId": "p_terr", "reason": "ROE_FREEZE"}], "note": "Terrestrial power blocked by ROE freeze."}
+{"v": 1, "kind": "input", "frame": 20, "op": "activatePower", "args": {"powerId": "p_orb"}}
+{"v": 1, "kind": "step", "frame": 20, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 21, "state": {"powers": {"p_orb": {"state": "active"}}}, "events": [], "note": "Orbital power ignores ROE freeze."}

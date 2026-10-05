@@ -1,0 +1,3 @@
+{ "v": 1, "kind": "init", "module": "prWar", "seed": 1337, "tunables": {}, "state": { "jslcLegitimacy": 72, "aoiPopularSupport": 50 } }
+{ "v": 1, "kind": "input", "frame": 0, "op": "lethalDamage", "args": { "vesselId": "v1" } }
+{ "v": 1, "kind": "expect", "frame": 0, "state": { "jslcLegitimacy": 0, "aoiPopularSupport": 75 }, "events": [ { "type": "PR_DELTA", "who": "JSLC", "delta": -72, "reason": "FLOTILLA_LETHAL_WIPEOUT" } ] }

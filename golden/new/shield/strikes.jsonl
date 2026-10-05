@@ -1,0 +1,7 @@
+{"v": 1, "kind": "init", "module": "shield", "seed": 1337, "tunables": {}, "state": {"jslcLegitimacy": 100, "structures": {"s1": {"state": "unverified", "conf": 0.3}, "s2": {"state": "confirmed", "conf": 0.95}}}}
+{"v": 1, "kind": "input", "frame": 10, "op": "damage", "args": {"targetId": "s1", "weaponLethality": "LETHAL", "amount": 1000}}
+{"v": 1, "kind": "step", "frame": 10, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 11, "state": {"jslcLegitimacy": 0}, "events": [{"type": "PR_DELTA", "who": "JSLC", "delta": -119, "reason": "UN_SITE_STRIKE_UNVERIFIED", "note": "round(28 * (2.0 - 0.30) * 2.5) = 119, legitimacy clamped to 0."}]}
+{"v": 1, "kind": "input", "frame": 20, "op": "damage", "args": {"targetId": "s2", "weaponLethality": "LETHAL", "amount": 1000}}
+{"v": 1, "kind": "step", "frame": 20, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 21, "state": {"jslcLegitimacy": 0}, "events": [{"type": "PR_DELTA", "who": "JSLC", "delta": -10, "reason": "UN_SITE_STRIKE_VERIFIED", "note": "round(28 * (2.0 - 0.95) * 0.35) = 10"}]}

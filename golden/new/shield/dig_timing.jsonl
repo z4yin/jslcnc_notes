@@ -1,0 +1,4 @@
+{"v": 1, "kind": "init", "module": "shield", "seed": 1337, "tunables": {}, "state": {"structures": {"s1": {"cache": null}}, "aoiFunds": 1000}}
+{"v": 1, "kind": "input", "frame": 0, "op": "digBeneath", "args": {"structureId": "s1", "workerId": "w1"}}
+{"v": 1, "kind": "step", "frame": 0, "frames": 1200}
+{"v": 1, "kind": "expect", "frame": 1200, "state": {"structures": {"s1": {"cache": "c1"}}, "aoiFunds": 600}, "events": [{"type": "SHIELD_CACHE_BUILT", "structureId": "s1", "cacheId": "c1"}], "note": "40s (1200 frames) dig time, costs 400 funds."}

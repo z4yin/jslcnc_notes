@@ -1,0 +1,6 @@
+{ "v": 1, "kind": "init", "module": "prWar", "seed": 1337, "tunables": {}, "state": { "jslcLegitimacy": 72, "aoiPopularSupport": 50 } }
+{ "v": 1, "kind": "step", "frame": 0, "frames": 4500, "note": "150 sec * 30 = 4500 frames for spawn schedule" }
+{ "v": 1, "kind": "expect", "frame": 4500, "state": {}, "events": [ { "type": "CONVOY_SPAWNED", "convoyId": "c1", "routeId": "UNCorridor_1", "cargo": [{"supplies": 300, "arms": 0}, {"supplies": 300, "arms": 120}, {"supplies": 300, "arms": 0}] } ], "note": "Spawn schedule for seed 1337" }
+{ "v": 1, "kind": "input", "frame": 4500, "op": "lethalFire", "args": { "truckId": "t1", "confidence": 0.30 } }
+{ "v": 1, "kind": "step", "frame": 4500, "frames": 30 }
+{ "v": 1, "kind": "expect", "frame": 4530, "state": { "jslcLegitimacy": 1 }, "events": [ { "type": "PR_DELTA", "who": "JSLC", "delta": -71, "reason": "UN_CONVOY_LETHAL" } ], "note": "Blind conf 0.30 -> -71. 28 * 1.7 * 1.5 = 71.4, rounded to 71" }

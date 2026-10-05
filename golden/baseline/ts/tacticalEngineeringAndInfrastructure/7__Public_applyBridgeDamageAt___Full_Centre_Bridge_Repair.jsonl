@@ -1,0 +1,4 @@
+{"v":1,"kind":"init","module":"tacticalEngineeringAndInfrastructure","seed":1337,"tunables":{},"state":{}}
+{"v":1,"kind":"input","frame":0,"op":"noop","args":{}}
+{"v":1,"kind":"step","frame":0,"frames":1}
+{"v":1,"kind":"expect","frame":1,"state":{},"events":[]}

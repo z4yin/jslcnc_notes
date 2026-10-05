@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "cases": {
+    "new/convoy/spawn_schedule": "convoy/spawn_schedule.jsonl",
+    "new/convoy/hijack_channel": "convoy/hijack_channel.jsonl",
+    "new/convoy/siphon_totals": "convoy/siphon_totals.jsonl",
+    "new/convoy/recovery": "convoy/recovery.jsonl",
+    "new/convoy/lethal": "convoy/lethal.jsonl",
+    "new/shield/dig_timing": "shield/dig_timing.jsonl",
+    "new/shield/strikes": "shield/strikes.jsonl",
+    "new/lawfare/condemnation_rebuttal": "lawfare/condemnation_rebuttal.jsonl",
+    "new/orbital/immunity": "orbital/immunity.jsonl",
+    "new/flotilla/lethal_wipeout": "flotilla/lethal_wipeout.jsonl"
+  }
+}

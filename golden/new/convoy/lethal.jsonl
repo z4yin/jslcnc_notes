@@ -1,0 +1,10 @@
+{ "v": 1, "kind": "init", "module": "convoy", "seed": 1337, "tunables": {}, "state": { "jslcLegitimacy": 100, "aoiPopularSupport": 50, "trucks": { "t1": { "conf": 0.30, "hp": 400 }, "t2": { "conf": 0.65, "hp": 400 } } } }
+{ "v": 1, "kind": "input", "frame": 10, "op": "damage", "args": { "targetId": "t1", "weaponLethality": "LETHAL", "amount": 50 } }
+{ "v": 1, "kind": "step", "frame": 10, "frames": 1 }
+{ "v": 1, "kind": "expect", "frame": 11, "state": { "jslcLegitimacy": 29 }, "events": [ { "type": "PR_DELTA", "who": "JSLC", "delta": -71, "reason": "UN_CONVOY_LETHAL", "note": "round(28 * (2.0 - 0.30) * 1.5) = 71" } ] }
+{ "v": 1, "kind": "input", "frame": 20, "op": "damage", "args": { "targetId": "t1", "weaponLethality": "LETHAL", "amount": 50 } }
+{ "v": 1, "kind": "step", "frame": 20, "frames": 1 }
+{ "v": 1, "kind": "expect", "frame": 21, "state": { "jslcLegitimacy": 29 }, "events": [], "note": "Penalty is charged exactly once per truck on first lethal damage." }
+{ "v": 1, "kind": "input", "frame": 30, "op": "damage", "args": { "targetId": "t2", "weaponLethality": "LETHAL", "amount": 50 } }
+{ "v": 1, "kind": "step", "frame": 30, "frames": 1 }
+{ "v": 1, "kind": "expect", "frame": 31, "state": { "jslcLegitimacy": 0 }, "events": [ { "type": "PR_DELTA", "who": "JSLC", "delta": -57, "reason": "UN_CONVOY_LETHAL", "capped": true, "note": "round(28 * (2.0 - 0.65) * 1.5) = 57. Legitimacy 29 - 57 clampled to 0." } ] }

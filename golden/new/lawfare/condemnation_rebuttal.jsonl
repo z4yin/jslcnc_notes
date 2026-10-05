@@ -1,0 +1,4 @@
+{"v": 1, "kind": "init", "module": "lawfare", "seed": 1337, "tunables": {}, "state": {"jslcLegitimacy": 50, "aoiPopularSupport": 50, "activeCondemnation": {"id": "c1", "jslcDelta": -6, "staged": true}}}
+{"v": 1, "kind": "input", "frame": 10, "op": "rebutCondemnation", "args": {"condemnationId": "c1"}}
+{"v": 1, "kind": "step", "frame": 10, "frames": 1}
+{"v": 1, "kind": "expect", "frame": 11, "state": {"jslcLegitimacy": 56}, "events": [{"type": "PR_DELTA", "who": "JSLC", "delta": 6, "reason": "LAWFARE_CONDEMNATION_REBUTTED"}], "note": "Rebuttal of staged incident refunds 100% of -6 penalty."}

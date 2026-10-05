@@ -1,0 +1,6 @@
+{"v": 1, "kind": "init", "module": "convoy", "seed": 1337, "tunables": {}, "state": {"trucks": {"t1": {"team": "Neutral_UN", "hp": 400}}}}
+{"v": 1, "kind": "input", "frame": 10, "op": "startHijack", "args": {"truckId": "t1", "hijackerId": "h1"}}
+{"v": 1, "kind": "step", "frame": 10, "frames": 45}
+{"v": 1, "kind": "input", "frame": 55, "op": "damage", "args": {"targetId": "h1", "amount": 10}}
+{"v": 1, "kind": "step", "frame": 55, "frames": 45}
+{"v": 1, "kind": "expect", "frame": 100, "state": {"trucks": {"t1": {"team": "Neutral_UN"}}}, "events": [], "note": "Damage interrupts 3-second (90 frame) hijack channel."}

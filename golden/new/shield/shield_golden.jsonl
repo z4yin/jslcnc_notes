@@ -1,0 +1,4 @@
+{ "v": 1, "kind": "init", "module": "prWar", "seed": 1337, "tunables": {}, "state": { "jslcLegitimacy": 72 } }
+{ "v": 1, "kind": "step", "frame": 0, "frames": 30 }
+{ "v": 1, "kind": "input", "frame": 30, "op": "confirmStrike", "args": { "siteId": "s1" } }
+{ "v": 1, "kind": "expect", "frame": 30, "state": { "jslcLegitimacy": 0 }, "events": [ { "type": "PR_DELTA", "who": "JSLC", "delta": -72, "reason": "UN_SITE_STRIKE_UNVERIFIED", "capped": true } ], "note": "Unverified strike clamps legitimacy to 0" }
